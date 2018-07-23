@@ -1,0 +1,12 @@
+{
+  "name": "rbkmoney-git-short-dive-in",
+  "version": "0.1.0",
+  "dependencies": {
+    "backslide": "^2.3.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "bs export",
+    "start": "bs serve"
+  }
+}
