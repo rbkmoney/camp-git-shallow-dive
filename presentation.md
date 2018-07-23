@@ -693,9 +693,173 @@ origin  https://github.com/rbkmoney/camp-git-shallow-dive (push)
 
 ## Удалённые репозитории
 
+* Основное состояние проекта находится в ветке `master`
+
+--
+
 * Пора создать ветку для новых изменений
 
+<pre class="terminal">
 ❯ git checkout -b ft/last-slides
+</pre>
+<pre class="terminal">
 Switched to a new branch 'ft/last-slides'
+</pre>
 
-* И создать на ней коммит с этими измнениями
+--
+
+* И создать на ней коммит с необходимыми измнениями
+
+<pre class="terminal">
+❯ git add presentation.md
+❯ git commit -m 'Add most presentation slides'
+</pre>
+<pre class="terminal">
+[ft/last-slides 268c683] Add most presentation slides
+ 1 file changed, 701 insertions(+)
+ create mode 100644 presentation.md
+</pre>
+
+---
+
+## Удалённые репозитории
+
+* Часто бывает так, что пока мы занимались этими изменениями, кто-то внёс изменения в основную ветку
+
+--
+
+* Нужно стараться синхронизировать _удалённые_ изменения
+
+--
+
+    В этот раз нам повезло
+
+    <pre class="terminal">
+    ❯ git fetch origin
+    ❯ git merge origin/master
+    </pre>
+    <pre class="terminal">
+    Already up to date.
+    </pre>
+
+---
+
+## Удалённые репозитории
+
+* Пора синхронизировать _наши_ изменения с нашим удалённым репозиторием
+
+--
+
+    <pre class="terminal">
+    ❯ git push -u keynslug ft/last-slides
+    </pre>
+    <pre class="terminal">
+    Counting objects: 3, done.
+    Delta compression using up to 8 threads.
+    Compressing objects: 100% (3/3), done.
+    Writing objects: 100% (3/3), 6.68 KiB | 6.68 MiB/s, done.
+    Total 3 (delta 0), reused 0 (delta 0)
+    To github.com:keynslug/camp-git-shallow-dive.git
+     * [new branch]      ft/last-slides -> ft/last-slides
+    Branch 'ft/last-slides' set up to track remote branch 'ft/last-slides' from 'keynslug'.
+    </pre>
+
+--
+
+* Мы отправили **3** объекта, несложно понять, что это: сам commit, tree object и blob object с файлом `presentation.md`
+
+--
+
+* Теперь мы **отслеживаем** изменения в удалённой ветке `ft/last-slides`
+
+---
+
+## Удалённые репозитории
+
+* Пора _интегрировать_ внесённые изменения в интеграционный репозиторий
+
+--
+
+* Создадим запрос на включение наших изменений
+
+    <pre class="terminal">
+    <span style="color:gray;">❯ hub pull-request</span>
+    </pre>
+    <pre class="terminal">
+    Add the most of presentation slides
+
+    <span style="color:gray;"># Requesting a pull to rbkmoney:master from keynslug:ft/last-slides</span>
+    <span style="color:gray;">#</span>
+    <span style="color:gray;"># Write a message for this pull request. The first block</span>
+    <span style="color:gray;"># of text is the title and the rest is the description.</span>
+    </pre>
+    <pre class="terminal">
+    https://github.com/rbkmoney/camp-git-shallow-dive/pull/1
+    </pre>
+
+--
+
+* Мы запросили включение в основную ветку интеграционного репозитория (`rbkmoney:master`)
+
+---
+
+## Удалённые репозитории
+
+* Дождёмся _одобрения_ нашего запроса
+
+--
+
+* После чего _интегратор_ произведёт включение, в результате которого произойдёт _слияние_ наших изменений с основной веткой
+
+--
+
+* Теперь нам необходимо синхронизировать состояние основной ветки с нашим локальным репозиторием
+--
+    <pre class="terminal">
+    <span style="color:gray;">❯ git checkout</span> master
+    </pre>
+    <pre class="terminal">
+    Switched to branch 'master'
+    Your branch is up to date with 'origin/master'.
+    </pre>
+
+* Синхронизация ещё не проведена, локальный репозиторий не знает о произошедших изменениях
+
+---
+
+## Удалённые репозитории
+
+* Получаем изменения с удалённого репозитория
+
+    <pre class="terminal">
+    <span style="color:gray;">❯ git pull</span> origin master
+    </pre>
+    <pre class="terminal">
+    remote: Counting objects: 1, done.
+    remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+    Unpacking objects: 100% (1/1), done.
+    From github.com:rbkmoney/camp-git-shallow-dive
+       d4da560..43fe41a  master     -> origin/master
+    </pre>
+
+--
+
+* Наблюдеам в истории появления коммита, фиксирующиего слияние наших изменений
+
+    <pre class="terminal">
+    <span style="color:gray;">❯ git log --oneline</span> keynslug/master..
+    </pre>
+    <pre class="terminal">
+    <span style="color:yellow;">43fe41a</span><span style="color:yellow;"> (</span><span style="color:red;font-weight:bold;">origin/master</span><span style="color:yellow;">, </span><span style="color:lime;font-weight:bold;">master</span><span style="color:yellow;">)</span> Merge pull request #1 from keynslug/ft/last-slides
+    <span style="color:yellow;">268c683</span><span style="color:yellow;"> (</span><span style="color:red;font-weight:bold;">keynslug/ft/last-slides</span><span style="color:yellow;">)</span> Add most presentation slides
+    </pre>
+
+---
+
+class: impact animation-fade
+layout: true
+
+---
+
+# Конец
+## Надеюсь, хоть кто-то узнал что-то новое
