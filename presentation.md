@@ -267,7 +267,7 @@ class: animation-fade
 
 --
 
-* Распределённость
+* Распределёность
 
 --
 
@@ -286,7 +286,7 @@ class: animation-fade
 
 --
 
-* Контрольные хэши в качестве идентификаторов **любых** изменений
+* Контролньные хэши в качестве идентификаторов **любых** изменений
 
 --
 
@@ -298,7 +298,7 @@ class: animation-fade
 --
 
 <pre class="terminal">
-<span style="color:gray;">❯ ls -la .git</span>
+<span style="color:gray;">❯ ls -la</span> .git
 </pre>
 
 <pre class="terminal">
@@ -323,7 +323,7 @@ drwxr-xr-x    6 keynslug  staff    192 Jun 13 11:22 <span style="font-weight:bol
 ## Коммиты
 --
 
-* Фрагмент истории проекта
+* Фрагмент истори проекта
 
 <pre class="terminal">
 <span style="color:yellow;">commit 879046011d1dbb845537628cc61eaae98dcf8c9c</span>
@@ -437,7 +437,7 @@ Changes not staged for commit:
 --
 
 .col-4[
-* Новые, ещё не включённые в **репозиторий**
+* Новые, ещё не влючённые в **репозиторий**
 ]
 
 .col-8[
