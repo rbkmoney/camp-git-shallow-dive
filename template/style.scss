@@ -10,20 +10,19 @@ $text-dark        : #212121;
 $text-light       : $light;
 $code-background  : #F8F8F8;
 $overlay          : transparentize(#000, .5);
-$font-size        : 24px;
+$font-size        : 36px;
 $font-size-impact : 128px;
-$font             : Consolas;
-$font-title       : Consolas;
-$font-fixed       : Consolas;
+$font             : Comic Sans;
+$font-title       : Comic Sans;
+$font-fixed       : Comic Sans;
 $margin           : 30px;
 $iframe-scale     : 1.5;
 
 
 // CSS Base
 // ---------------------------------------------------------------------------
-
 * { box-sizing: border-box; }
-body { font-family: $font; }
+body { font-family: Comic Sans; }
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 $margin 0;
   font-family: $font-title;
