@@ -10,11 +10,11 @@ $text-dark        : #212121;
 $text-light       : $light;
 $code-background  : #F8F8F8;
 $overlay          : transparentize(#000, .5);
-$font-size        : 36px;
+$font-size        : 24px;
 $font-size-impact : 128px;
-$font             : Comic Sans;
-$font-title       : Comic Sans;
-$font-fixed       : Comic Sans;
+$font             : 'Calibri', Helvetica, sans-serif;
+$font-title       : 'Calibri', Helvetica, sans-serif;
+$font-fixed       : 'Calibri', Helvetica, sans-serif;
 $margin           : 30px;
 $iframe-scale     : 1.5;
 
@@ -22,7 +22,7 @@ $iframe-scale     : 1.5;
 // CSS Base
 // ---------------------------------------------------------------------------
 * { box-sizing: border-box; }
-body { font-family: Comic Sans; }
+body { font: Comic Sans; }
 h1, h2, h3, h4, h5, h6 {
   margin: 0 0 $margin 0;
   font-family: $font-title;
@@ -189,6 +189,7 @@ pre.terminal {
 [class^="col-"] {
   float: left;
   &.inline-block {
+    padding: 4px;
     float: none;
     display: inline-block;
   }
