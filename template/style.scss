@@ -164,7 +164,7 @@ blockquote {
 .alt-bg { background-color: $secondary; };
 
 pre.terminal {
-  margin: 5px 15px;
+  //margin: -2px 0px;
   padding: 1em;
   font-size: 16px;
   background-color: $dark;
@@ -189,6 +189,8 @@ pre.terminal {
 
 [class^="col-"] {
   float: left;
+  padding: 0em 0.15em;
+  //margin: 0px 1px;
   &.inline-block {
     float: none;
     display: inline-block;
