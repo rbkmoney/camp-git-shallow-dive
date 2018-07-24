@@ -405,19 +405,26 @@ Switched to a new branch 'fix/spelling'
 ## Состояния файлов
 --
 
+.col-4[
 * Находящиеся в **стейджинге**, попадающие в грядущий коммит
+]
+
+.col-8[
 <pre class="terminal">
 Changes to be committed:
   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
 
     <span style="color:lime;">new file:   README.md</span>
 </pre>
+]
 
----
+--
 
-## Состояния файлов
-
+.col-4[
 * Изменённые в **рабочей копии** репозитория, но ещё не попавшие в **стейджинг**
+]
+
+.col-8[
 <pre class="terminal">
 Changes not staged for commit:
   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
@@ -425,12 +432,15 @@ Changes not staged for commit:
 
     <span style="color:red;">modified:   SCENARIOS.md</span>
 </pre>
+]
 
----
+--
 
-## Состояния файлов
-
+.col-4[
 * Новые, ещё не включённые в **репозиторий**
+]
+
+.col-8[
 <pre class="terminal">
 Untracked files:
   (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
@@ -439,12 +449,13 @@ Untracked files:
     <span style="color:red;">withdrawal.svg</span>
     <span style="color:red;">withdrawal.wsd</span>
 </pre>
+]
 
 ---
 
 ## Объекты
 
-* Каждый элемент репозитория – **объект**
+* Практически каждый элемент репозитория – **объект**
 
 --
 
@@ -455,6 +466,12 @@ Untracked files:
 --
 
     - коммит
+
+--
+
+* Исключения
+
+    - ветки – **ссылки** на коммиты
 
 ---
 
