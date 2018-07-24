@@ -12,10 +12,10 @@ $code-background  : #F8F8F8;
 $overlay          : transparentize(#000, .5);
 $font-size        : 24px;
 $font-size-impact : 128px;
-$font             : Arial, Helvetica, sans-serif;
-$font-title       : Arial, Helvetica, sans-serif;
-$font-fixed       : 'Input Mono', 'Lucida Console', Monaco, monospace;
-$margin           : 20px;
+$font             : Consolas;
+$font-title       : Consolas;
+$font-fixed       : Consolas;
+$margin           : 30px;
 $iframe-scale     : 1.5;
 
 
@@ -181,6 +181,7 @@ pre.terminal {
   &.table { display: table; };
   &.table [class^="col-"] {
     float: none;
+    padding: 0.7px;
     display: table-cell;
     vertical-align: inherit;
   }
