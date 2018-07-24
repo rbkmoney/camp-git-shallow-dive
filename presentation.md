@@ -405,11 +405,11 @@ Switched to a new branch 'fix/spelling'
 ## Состояния файлов
 --
 
-.col-4[
+.col-6[
 * Находящиеся в **стейджинге**, попадающие в грядущий коммит
 ]
 
-.col-8[
+.col-6[
 <pre class="terminal">
 Changes to be committed:
   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
@@ -420,15 +420,17 @@ Changes to be committed:
 
 --
 
-.col-4[
+.col-6[
 * Изменённые в **рабочей копии** репозитория, но ещё не попавшие в **стейджинг**
 ]
 
-.col-8[
+.col-6[
 <pre class="terminal">
 Changes not staged for commit:
-  (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
-  (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+  (use &quot;git add &lt;file&gt;...&quot; to update what 
+  will be committed)
+  (use &quot;git checkout -- &lt;file&gt;...&quot; to 
+  discard changes in working directory)
 
     <span style="color:red;">modified:   SCENARIOS.md</span>
 </pre>
@@ -436,14 +438,15 @@ Changes not staged for commit:
 
 --
 
-.col-4[
-* Новые, ещё не включённые в **репозиторий**
+.col-6[
+* Новые, ещё не влючённые в **репозиторий**
 ]
 
-.col-8[
+.col-6[
 <pre class="terminal">
 Untracked files:
-  (use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+  (use &quot;git add &lt;file&gt;...&quot; to include in 
+  what will be committed)
 
     <span style="color:red;">package-lock.json</span>
     <span style="color:red;">withdrawal.svg</span>
