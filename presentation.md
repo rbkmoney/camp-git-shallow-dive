@@ -320,10 +320,22 @@ drwxr-xr-x    6 keynslug  staff    192 Jun 13 11:22 <span style="font-weight:bol
 
 ---
 
-## Коммит
+## Коммиты
 --
 
 * Фрагмент истории проекта
+
+<pre class="terminal">
+<span style="color:yellow;">commit 879046011d1dbb845537628cc61eaae98dcf8c9c</span>
+Parent: 0a8b2bf3a13593bdd70e46cc0b4cce5e714cb285
+Author: Andrew Mayorov &lt;encube.ul@gmail.com&gt;
+Date:   Sun Jul 15 19:10:33 2018 +0300
+
+    CAPI-262: Make `bin` example look in line w/ definition (#26)
+
+ api/payres/spec/definitions/SecuredBankCard.yaml | 2 <span style="color:lime;">+</span><span style="color:red;">-</span>
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+</pre>
 
 --
 
@@ -331,15 +343,62 @@ drwxr-xr-x    6 keynslug  staff    192 Jun 13 11:22 <span style="font-weight:bol
 
 --
     - **Зачем?** Сообщение
-
 --
     - **Кто?** Автор
-
 --
     - **Когда?** Время
-
 --
     - **Что?** Набор изменённых файлов
+--
+    - **Где?** Хэш, хэш родительского коммита
+
+---
+
+## Ветки
+--
+
+* Пространство для манёвров
+
+--
+
+* Название для определённой осмысленной истории изменений
+
+--
+
+* Набор **коммитов**, наложенных на **базовую** ветку
+
+---
+
+## Ветки
+--
+
+<pre class="terminal">
+<span style="color:gray;">❯ git checkout -b</span> fix/spelling
+</pre>
+<pre class="terminal">
+Switched to a new branch 'fix/spelling'
+</pre>
+
+--
+
+<pre class="terminal">
+<span style="color:gray;">❯ git log --oneline</span> HEAD~3..
+</pre>
+<pre class="terminal">
+<span style="color:yellow;">8790460</span><span style="color:yellow;"> (</span><span style="color:aqua;font-weight:bold;">HEAD -&gt; </span><span style="color:lime;font-weight:bold;">fix/spelling</span><span style="color:yellow;">, </span><span style="color:red;font-weight:bold;">origin/master</span><span style="color:yellow;">, </span></span><span style="color:lime;font-weight:bold;">master</span><span style="color:yellow;">)</span> CAPI-262: Make `bin` example look in line w/ definition (#26)
+<span style="color:yellow;">0a8b2bf</span> CAPI-262: Stash deposits for later (#21)
+<span style="color:yellow;">04db123</span> CAPI-262: Stash identity challenge cancellation (#23)
+</pre>
+
+--
+
+<pre class="terminal">
+<span style="color:gray;">❯ cat</span> .git/refs/heads/fix/spelling .git/refs/heads/master                                                                                     fix/spelling
+</pre>
+<pre class="terminal">
+879046011d1dbb845537628cc61eaae98dcf8c9c
+879046011d1dbb845537628cc61eaae98dcf8c9c
+</pre>
 
 ---
 
